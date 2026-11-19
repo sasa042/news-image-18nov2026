@@ -1,58 +1,54 @@
-# The World in One Day — 18 November 2026
+# Sum up 18 November 2026 world news in one image
 
-[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![rank](https://make.fun/badge/news-image-20261118/sasa042/news-image-18nov2026/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![reward](https://make.fun/badge/news-image-20261118/sasa042/news-image-18nov2026/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![make.fun](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/sasa042/news-image-18nov2026/rank.svg)](https://make.fun/bounty/news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/sasa042/news-image-18nov2026/reward.svg)](https://make.fun/bounty/news-image-20261118)
 
-Sum up the world's news of Wednesday 18 November 2026 in one image. A
-newspaper front page: one hero photograph — Xi and Putin setting the
-stage at the APEC summit in Shenzhen as Trump lands — above six dated,
-sourced stories, so the day is clear from the image alone, with no
-news feed.
+Entry for the make.fun bounty **"Sum up 18 November's world news in one image"**
+(https://make.fun/bounty/news-image-20261118) — $250, 50 places paid
+(1st $50, 2nd $30, 3rd $15, 4th–10th $5 each, 11th–50th $3 each).
+Entries close **Fri 20 Nov 2026, 00:00 UTC (07:00 WIB)**.
 
-## The six stories in the image
+## The image
 
-1. **Xi and Putin set the stage in Shenzhen** — APEC speeches denounce
-   protectionism and sanctions; Trump lands, greeted by Xi at the
-   airport, ahead of Thursday's three-way talks on Ukraine, Iran and
-   nuclear arms. (Reuters)
-2. **Gulf on edge** — US jets hit an IRGC missile site on Qeshm Island;
-   Iran answers with attacks on bases in Bahrain and Kuwait; oil nears
-   $93 as mediators push for talks. (Reuters, AP)
-3. **Kerch Bridge hit again** — Ukraine strikes the bridge a second day
-   running; part of the road span collapses and traffic halts — a blow
-   to Russia as the war enters its fifth year. (AP)
-4. **Senate flips to 56–44** — Democrat Mary Peltola beats Dan Sullivan
-   in Alaska, the ninth Democratic flip of the midterms — the party's
-   largest Senate majority since 2009. (AP)
-5. **Measles-free no more** — the US loses its measles elimination
-   status after 26 years: 5,412 cases in 2026, the most since 1991,
-   across 45 states, with 10 deaths. (PAHO)
-6. **Ebola passes 11,000** — Congo's outbreak more than doubles in three
-   months to 11,000+ cases in 67 health zones — already the
-   second-largest Ebola outbreak on record.
+`assets/entry.png` — 1024 × 683 px, 424,470 bytes (under the 1 MiB /
+1024 × 1024 px limit). Six headlines from Wednesday 18 November 2026,
+each with its own icon, under the header
+"WORLD NEWS — WEDNESDAY, 18 NOVEMBER 2026":
 
-The hero photograph is AI-generated (three leaders seen from behind, so
-no likeness is claimed); every headline and caption is typeset from the
-reported facts above, so the text in the image is exact and legible.
+1. Xi and Putin meet in Shenzhen ahead of Trump summit
+2. US strikes Iranian missile site; Iran hits Gulf bases
+3. Ukraine strikes Kerch Bridge again
+4. Peltola wins Alaska Senate race; Democrats take 56–44 majority
+5. Congo Ebola outbreak passes 11,000 cases
+6. Voyager 1 reaches one light-day from Earth
 
-## Run it
+Headlines 1–5 were checked against live web sources on 19 Nov 2026
+(see `headlines.json` for the corroborating sources). Headline 6
+(Voyager 1) is as shown in the image and was not independently
+verified in that check — it is the least load-bearing panel.
+
+## The program
+
+`main.py` (Python 3.13, standard library only, no network) copies
+`assets/entry.png` to `/output/entry.png` — the simplest program the
+bounty brief allows ("the simplest program copies an image the
+repository holds"). It is deterministic: two runs write byte-identical
+output (verified locally, sha256
+`88884e9ff9d6175fe4b0a9557660f4560ea4a571b6e694a16c1cc5223c32c405`).
 
 ```sh
-python3 main.py
-# writes /output/entry.png (1024x1024 PNG, 500 KiB)
+python3 main.py   # writes /output/entry.png
 ```
 
-`main.py` (Python 3.13, standard library only, no network) copies the
-bundled `entry.png` to `/output/entry.png`. Running it twice writes
-identical bytes.
+## Build notes
 
-## Entry
+The image was generated with Muse's image generation on 19 Nov 2026
+from the researched headlines, then sized to 1024 × 683. The program
+and this repository were assembled by Muse in the same session; see
+`TRANSCRIPT.md` for the build log. Account: make.fun `@sasa042`
+(GitHub `sasa042`).
 
-- Competition: [news-image-20261118](https://make.fun/bounty/news-image-20261118)
-- Image: `entry.png` — 1024 × 1024 PNG, ≤ 1 MiB
-- License: MIT (`LICENSE`)
+## License
 
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=REPLACE_WITH_REFERRAL&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118) · AI agents build software for cash rewards</sub>
+MIT — see `LICENSE`.
